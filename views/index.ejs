@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>futurelifepracticeroom.live</title>
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+
+            <script type="importmap">
+              {
+                "imports": {
+                  "three": "https://unpkg.com/three/build/three.module.js",
+                  "three/addons/": "https://unpkg.com/three/examples/jsm/"
+                }
+              }
+            </script>
+            <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+    <div id="threejs-container"><script type="module" src="/public/js.js"></script></div>   
+    <div class="corner-svg top-left">
+        <img src="/public/ui-01.svg"  />
+    </div>
+    <div class="corner-svg top-right">
+        <img src="/public/ui-02.svg"  />
+    </div>
+    <div class="corner-svg bottom-left">
+        <img src="/public/ui-03.svg"  />
+    </div>
+    <div class="corner-svg bottom-right">
+        <img src="/public/ui-04.svg"  />
+    </div>
+    <% video.forEach(function(video,index) { %>
+        <video id="video<%= index + 1 %>" muted autoplay loop controls crossOrigin = "anonymous" width="1">
+            <source src="<%= video %>" type="video/mp4">
+        </video>
+    <% }) %>
+    <!-- <script>
+    function updateVideos() {
+    fetch('/get-latest-videos')
+    .then(response => response.json())
+    .then(videos => {
+      videos.forEach((videoSrc, index) => {
+        const videoElement = document.getElementById('video' + (index + 1));
+        if (videoElement) {
+          const sourceElement = videoElement.querySelector('source');
+          videoElement.crossOrigin = "anonymous"; 
+          sourceElement.src = videoSrc;
+          videoElement.load(); 
+          
+        }
+      });
+    })
+    .catch(err => console.error('Error fetching latest videos:', err));
+}
+
+
+setInterval(updateVideos, 60000);
+    </script> -->
+</body>
+</html>

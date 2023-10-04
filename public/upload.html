@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>futureliveparticeroom.live</title>
+    <link rel="stylesheet" href="/public/css.css">
+</head>
+ 
+<body id="body">
+    <form ref='uploadForm' 
+    id='uploadForm' 
+    action='/upload' 
+    method='post' 
+    encType="multipart/form-data" 
+    class='hidden'>
+    <input type="file" name="image" accept="image/*" id="fileInput" required />
+    <input type='submit' value='上傳' id='uploadButton' />
+</form> 
+    <a  class="link">
+    <div class="svg-container svg-container-1" id="svgContainer" >
+        <img src="/public/img/landing-u-01.svg" >
+    </div>
+
+    <div class="svg-container svg-container-2" id="svgContainer2" >
+        <img src="/public/img/landing-u-02.svg" >
+    </div>
+    </a>
+  
+        <div id="loading" class="container svg-box"  style="display: none;">
+           
+            <img src="/public/img/landing-a-01.svg" class="svg-box" />
+        </div>
+        <script src="/public/script.js"></script>
+</body>
+
+</html>
+
